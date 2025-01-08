@@ -20,7 +20,6 @@ const MainLayout = () => {
         <div
           style={{
             color: "white",
-
             height: "4rem",
             display: "flex",
             justifyContent: "center",
