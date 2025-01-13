@@ -1,16 +1,7 @@
-import { ReactNode } from "react";
-
-import { NavLink } from "react-router-dom";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import CreateAdmin from "../pages/admin/CreateAdmin";
 import CreateFaculty from "../pages/admin/CreateFaculty";
 import CreateStudent from "../pages/admin/CreateStudent";
-
-type TSidebarItem = {
-  key: string;
-  label: ReactNode;
-  children?: TSidebarItem[];
-};
 
 export const adminPaths = [
   {
