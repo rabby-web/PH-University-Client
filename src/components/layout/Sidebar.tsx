@@ -3,7 +3,31 @@ import { sidebarItemGenerator } from "../../utils/sidebarItemsGenerator";
 import { adminPaths } from "../../routes/admin.routes";
 const { Sider } = Layout;
 
+const userRole = {
+  ADMIN: "admin",
+  FACULTY: "faculty",
+  STUDENT: "student",
+};
+
 export default function Sidebar() {
+  const role = "faculty";
+
+  let sidebarItems;
+
+  switch (role) {
+    case userRole.ADMIN:
+      sidebarItems = sidebarItemGenerator(adminPaths, userRole.ADMIN);
+      break;
+    case userRole.FACULTY:
+      sidebarItems = sidebarItemGenerator(adminPaths, userRole.FACULTY);
+      break;
+    case userRole.STUDENT:
+      sidebarItems = sidebarItemGenerator(adminPaths, userRole.STUDENT);
+      break;
+    default:
+      break;
+  }
+
   return (
     <>
       <Sider breakpoint="lg" collapsedWidth="0">
@@ -22,7 +46,7 @@ export default function Sidebar() {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={["4"]}
-          items={sidebarItemGenerator(adminPaths, "admin")}
+          items={sidebarItems}
         />
       </Sider>
     </>
