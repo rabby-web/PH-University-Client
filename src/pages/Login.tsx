@@ -16,7 +16,7 @@ export default function Login() {
 
   const onSubmit = (data) => {
     const userInfo = {
-      id: data.userId,
+      id: data.id,
       password: data.password,
     };
     login(userInfo);
