@@ -19,7 +19,7 @@ export default function Login() {
   // });
 
   const defaultValues = {
-    id: "A-0001",
+    userId: "A-0001",
     password: "admin123",
   };
 
@@ -32,7 +32,7 @@ export default function Login() {
 
     try {
       const userInfo = {
-        id: data.id,
+        id: data.userId,
         password: data.password,
       };
       const res = await login(userInfo).unwrap();
