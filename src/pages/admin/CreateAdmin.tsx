@@ -1,7 +1,9 @@
-export default function CreateAdmin() {
+const CreateAdmin = () => {
   return (
-    <>
-      <h1>Create Admin</h1>
-    </>
+    <div>
+      <h1> This is CreateAdmin component </h1>
+    </div>
   );
-}
+};
+
+export default CreateAdmin;

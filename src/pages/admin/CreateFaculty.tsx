@@ -1,7 +1,9 @@
-export default function CreateFaculty() {
+const CreateFaculty = () => {
   return (
-    <>
-      <h1>Create Faculty</h1>
-    </>
+    <div>
+      <h1> This is CreateFaculty component </h1>
+    </div>
   );
-}
+};
+
+export default CreateFaculty;

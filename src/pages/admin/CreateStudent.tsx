@@ -1,7 +1,9 @@
-export default function CreateStudent() {
+const CreateStudent = () => {
   return (
-    <>
-      <h1>Create Student</h1>
-    </>
+    <div>
+      <h1> This is CreateStudent component </h1>
+    </div>
   );
-}
+};
+
+export default CreateStudent;

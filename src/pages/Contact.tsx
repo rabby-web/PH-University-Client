@@ -1,7 +1,9 @@
-export default function Contact() {
+const Contact = () => {
   return (
-    <>
-      <h2>Contact</h2>
-    </>
+    <div>
+      <h1> This is Contact component </h1>
+    </div>
   );
-}
+};
+
+export default Contact;

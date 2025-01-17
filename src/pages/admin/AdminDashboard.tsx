@@ -1,7 +1,9 @@
-export default function AdminDashboard() {
+const AdminDashboard = () => {
   return (
-    <>
-      <h1>Admin Dashboard</h1>
-    </>
+    <div>
+      <h1> This is AdminDashboard component </h1>
+    </div>
   );
-}
+};
+
+export default AdminDashboard;

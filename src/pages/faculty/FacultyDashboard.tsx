@@ -1,7 +1,9 @@
-export default function FacultyDashboard() {
+const FacultyDashboard = () => {
   return (
-    <>
-      <h1>Faculty Dashboard</h1>
-    </>
+    <div>
+      <h1> This is FacultyDashboard component </h1>
+    </div>
   );
-}
+};
+
+export default FacultyDashboard;

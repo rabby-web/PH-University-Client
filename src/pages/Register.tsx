@@ -1,7 +1,9 @@
-export default function Register() {
+const Register = () => {
   return (
-    <>
-      <h1>Register Page</h1>
-    </>
+    <div>
+      <h1> This is Register component </h1>
+    </div>
   );
-}
+};
+
+export default Register;
