@@ -1,3 +1,8 @@
+import { Button } from "antd";
+import PHForm from "../../../components/form/PHForm";
+import PHInput from "../../../components/form/PHInput";
+import { FieldValues, SubmitHandler } from "react-hook-form";
+
 const studentDummyData = {
   password: "student123",
   student: {
@@ -38,10 +43,20 @@ const studentDummyData = {
 };
 
 const CreateStudent = () => {
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    // console.log(data);
+
+    const formData = new FormData();
+    formData.append("data", JSON.stringify(data));
+
+    //! This for development just for checking
+    console.log(Object.fromEntries(formData));
+  };
   return (
-    <div>
-      <h1> This is CreateStudent component </h1>
-    </div>
+    <PHForm onSubmit={onSubmit}>
+      <PHInput type="text" name="name" label="Name" />
+      <Button htmlType="submit">Submit</Button>
+    </PHForm>
   );
 };
 
