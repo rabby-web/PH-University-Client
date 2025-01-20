@@ -48,6 +48,23 @@ public-hoist-pattern[]=*@nextui-org/*
 
 After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
 
-## License
+For the single-page and larger view, you can implement it in your CSS or Tailwind configuration by adjusting margins, padding, and widths for the main content.
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+For example, you can apply a full-screen layout by adding a wrapper that ensures the page takes the full viewport height and width. Here's an example of what the styling could look like:
+
+```html
+<div
+  class="w-full h-screen flex flex-col justify-center items-center bg-gray-100 text-gray-800"
+>
+  <h1 class="text-4xl font-bold mb-6">Next.js & NextUI Template</h1>
+  <p class="text-lg max-w-3xl text-center mb-8">
+    This is a template for creating applications using **Next.js 14** (app
+    directory) and **NextUI v2**.
+  </p>
+  <a
+    href="https://githubbox.com/nextui-org/next-app-template"
+    class="text-blue-500 underline"
+    >Try it on CodeSandbox</a
+  >
+</div>
+```
