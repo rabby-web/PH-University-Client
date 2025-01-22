@@ -1,14 +1,13 @@
-import { Button, Modal, Table } from "antd";
+import { Button, Modal, Table } from 'antd';
 import {
   useAddFacultiesMutation,
   useGetAllCoursesQuery,
-} from "../../../redux/features/admin/courseManagement";
-import { useState } from "react";
-import PHForm from "../../../components/form/PHForm";
-import PHSelect from "../../../components/form/PHSelect";
-import { useGetAllFacultiesQuery } from "../../../redux/features/admin/userManagement.api";
-// import { useGetAcademicFacultiesQuery } from "../../../redux/features/admin/academicManagement.api";
-// import { useGetAllFacultiesQuery } from "../../../redux/features/admin/userManagement.api";
+} from '../../../redux/features/admin/courseManagement';
+import { useState } from 'react';
+import PHForm from '../../../components/form/PHForm';
+import PHSelect from '../../../components/form/PHSelect';
+import { useGetAcademicFacultiesQuery } from '../../../redux/features/admin/academicManagement.api';
+import { useGetAllFacultiesQuery } from '../../../redux/features/admin/userManagement.api';
 
 const Courses = () => {
   // const [params, setParams] = useState<TQueryParam[] | undefined>(undefined);
@@ -23,18 +22,18 @@ const Courses = () => {
 
   const columns = [
     {
-      title: "Title",
-      key: "title",
-      dataIndex: "title",
+      title: 'Title',
+      key: 'title',
+      dataIndex: 'title',
     },
     {
-      title: "Code",
-      key: "code",
-      dataIndex: "code",
+      title: 'Code',
+      key: 'code',
+      dataIndex: 'code',
     },
     {
-      title: "Action",
-      key: "x",
+      title: 'Action',
+      key: 'x',
       render: (item) => {
         return <AddFacultyModal facultyInfo={item} />;
       },
